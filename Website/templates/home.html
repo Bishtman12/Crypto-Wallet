@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}
+Home Page
+{% endblock title %}
+{% block content %}
+<section id="home" class="min-h-100vh flex justify-start items-center">
+    <div class="mx-5 md-mx-l3" text>
+        <div>
+            <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">My First Website</h1>
+            <div class="br-8 mt-10 inline-flex">
+                <button class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fw-300 fs-s3 mr-0 br-l-0">Get
+                    Started</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Features-->
+<div class="mx-5 md-mx-l3" text>
+<h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Features</h1></div>
+<section id="features" class="p-10 md-p-l5">
+    <div class="flex flex-column md-flex-row mx-auto">
+        <div class="w-100pc md-w-40pc">
+            <div class="br-8 p-5 m-5">
+                <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
+                        data-feather="book-open" class="w-l5"></i></div>
+                <h4 class="white fw-600 fs-m3 mb-5">Crypto News</h4>
+                <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Read the latest Crypto </div>
+                <a href="#"
+                    class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
+            </div>
+        </div>
+        <div class="w-100pc md-w-40pc">
+            <div class="br-8 p-5 m-5">
+                <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
+                        data-feather="calendar" class="w-l5"></i></div>
+                <h4 class="white fw-600 fs-m3 mb-5">Schedule Your Day</h4>
+                <div class="indigo-lightest fw-600 fs-m1 opacity-50">
+                    Add, Delete and Update Your Tasks
+                </div>
+                <a href="/task"
+                    class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Go Now</a>
+            </div>
+        </div>
+        <div class="w-100pc md-w-40pc">
+            <div class="br-8 p-5 m-5">
+                <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
+                        data-feather="database" class="w-l5"></i></div>
+                <h4 class="white fw-600 fs-m3 mb-5">Market</h4>
+                <div class="indigo-lightest fw-600 fs-m1 opacity-50">Start Trading Crypto with real live prices</div>
+                <a href="/market"
+                    class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Start Trading</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer-->
+<footer class="p-5 md-p-l5 bg-indigo-lightest-10">
+    <div class="flex flex-wrap">
+        <div class="md-w-25pc mb-10">
+            <h3 class="white fw-600" >About Me</h3>
+            <div class="white opacity-70 fs-s2 mt-4 md-pr-10">
+                <p class="white  fw-300 lh-2">A Self-Taught Programmer equipped with MS in Chemistry
+
+                </p>
+            </div>
+        </div>
+        <div class="w-100pc md-w-75pc">
+            <div class="flex justify-around">
+                <div class=" md-px-10 mb-10">
+                    <h5 class="white">New Changes Soon!</h5>
+                    <ul class="list-none mt-5 fs-s2">
+                        <li class="my-3"><a href="#" class="white opacity-70 no-underline ">News Section</a></li>
+                        <li class="my-3"><a href="#" class="white opacity-70 no-underline ">Some UI Changes</a>
+                        </li>
+                        <li class="my-3"><a href="#"
+                                class="white opacity-70 no-underline hover-underline">Sorting Features</a></li>
+                        <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Coin Recommendation</a>
+                        </li>
+                    </ul>
+                </div>
+        <div class="w-100pc md-w-25pc">
+            <div class="flex justify-around mx-50">
+                <a href="https://github.com/Bishtman12" class="relative p-5 bg-indigo br-round white hover-scale-up-1 ease-400"><i
+                        data-feather="github" class="absolute-center h-4"></i></a>
+                <a href="#" class="relative p-5 bg-indigo br-round white hover-scale-up-1 ease-400"><i
+                        data-feather="twitter" class="absolute-center h-4"></i></a>
+                <a href="https://www.linkedin.com/in/sachin-bisht-946351161/" class="relative p-5 bg-indigo br-round white hover-scale-up-1 ease-400"><i
+                        data-feather="linkedin" class="absolute-center h-4"></i></a> 
+            </div>
+        </div>
+    </div>
+</footer>
+<a class="fixed top-50pc right-0 p-3 bg-indigo white hover-scale-up-1 ease-300 no-underline" href="https://github.com/Bishtman12/WebApp" target="_blank" >
+    <i class="w-4" data-feather="download"></i>
+{% endblock content %}

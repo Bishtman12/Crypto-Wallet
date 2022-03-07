@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}
+Registraion Form
+{% endblock title %}
+{% block content %}
+
+<body class="text-center" >
+    <img src= "https://flyclipart.com/thumb2/explosion-gif-transparent-transparent-gif-sticker-741584.png" alt="this slowpoke moves" width="250" height="150" />
+</body>
+    <div class="container">
+        <h1 class="h2 mb-3 font-weight-normal">Please Create Your Account</h1>
+        <form method="POST" class="form-register" style="color:white">
+            {{form.hidden_tag()}}
+            <div class="row g-3">
+                <div class="col">
+                    {{form.username.label()}}
+                    {{form.username(class='form-control',placeholder='User Name')}}
+                </div>
+                <div class="col">
+                    {{form.email_add.label()}}
+                    {{form.email_add(class='form-control',placeholder='Email Address')}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{form.password1.label()}}
+                    {{form.password1(class='form-control',placeholder='Password')}}
+                </div>
+                <div class="col">
+                    {{form.password2.label()}}
+                    {{form.password2(class='form-control',placeholder='Confirm Password')}}
+                </div>
+            </div>
+            <br>
+            {{form.submit(class="btn btn-primary btn-lg")}}
+            <br>
+            <br>
+            <div class="checkbox mb-3">
+                <h6>Already Have Account?</h6>
+                <a href="{{url_for('login_page')}}" class="btn btn-secondary btn-lg btn-sm " tabindex="-1" role="button"
+                    aria-disabled="true">Login</a>
+            </div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

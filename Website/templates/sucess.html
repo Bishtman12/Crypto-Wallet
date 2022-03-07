@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+Home Page
+{% endblock title %}
+{% block content %}
+<section id="home" class="min-h-100vh flex justify-start items-center">
+    <div class="mx-5 md-mx-l3" text>
+        <div class="text-center ">
+            <h1 class="green fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Congrats! Your Account has been Ccreated</h1>
+            <h4 class="green fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-450 ">Please log in to Get Started</h4>
+            <div class="br-8 mt-10 inline-flex">
+                <a href = "{{url_for('login_page')}}" button class="button-lg bg-primary ">Log In</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

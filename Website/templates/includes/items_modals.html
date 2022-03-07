@@ -1,0 +1,100 @@
+<style>
+    .modal-content {
+        background-color: indigo;
+    }
+</style>
+<div class="modal fade" id="buymodal-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title white fs-l3 lh-2 md-lh-1 fw-900 mx-10 " id="exampleModalLabel">{{item.coin_name}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                    {{purchase_form.hidden_tag()}}
+                    <h4 class="text-center white md-lh-1 fw-900 mx-10">Confirm Buy to buy {{item.coin_name}} for &#36 {{item.coin_price}}?</h4>
+                    <input id="purchased_item" name="purchased_item" type="hidden" value="{{item.coin_name}}">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                      </div>
+                    {{purchase_form.submit(class="btn btn-success btn-sm")}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">Cancel</button>
+
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<style>
+    .modal-content {
+        background-color: black;
+    }
+</style>
+<div class="modal fade" id="sellmodal-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  white fs-l3 lh-2 md-lh-1 fw-900 mx-10" id="exampleModalLabel">{{item.coin_name}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                    {{selling_form.hidden_tag()}}
+                    <h4 class="text-center  white md-lh-1 fw-900 mx-10">Confirm Sell to sell Your {{item.coin_name}} for &#36 {{item.coin_price}}?</h4>
+                    <br>
+                    <input id="sold_item" name="sold_item" type="hidden" value="{{item.coin_name}}">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                      </div>
+                    {{selling_form.submit(class="btn btn-danger btn-sm")}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary " data-dismiss="modal">Cancel</button>
+
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal -->
+<style>
+    .modal-content {
+        background-color: black;
+    }
+</style>
+<div class="modal fade" id="info-{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  white fs-l3 lh-2 md-lh-1 fw-900 mx-10" id="exampleModalLabel">{{item.coin_name}} Description</h5>
+            </div>
+            <div class="modal-body">
+                    <br>
+                    <p class=" white md-lh-1 fw-600 mx-10">{{item.coin_info}}</p>
+                    <p class=" white md-lh-1 fw-600 mx-10"> Read White Paper [{{item.coin_paper}}]</p>
+            </div>
+            <div class="modal-footer">
+                <a href = {{item.coin_website}} class="btn btn-primary btn-sm">Visit Website</a>
+                <button type="button" class="btn btn-danger " data-dismiss="modal">Back</button>
+
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

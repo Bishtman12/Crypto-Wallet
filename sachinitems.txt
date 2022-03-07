@@ -1,0 +1,5 @@
+item3 = Market(name = 'SAND', price = 300 ,graph = "https://www.coinbase.com/price/the-sandbox" , desc="https://installers.sandbox.game/The_Sandbox_Whitepaper_2020.pdf", total = 10000)
+
+item2 = Market(name = 'MATIC', price = 150,graph = "https://coinmarketcap.com/currencies/polygon/" , desc="https://github.com/maticnetwork/whitepaper", total = 5000)
+
+item1 = Market(name = 'DUSK', price = 30,graph = "https://coinmarketcap.com/currencies/dusk-network/" , desc="https://dusk.network/uploads/dusk-whitepaper.pdf", total = 10000)

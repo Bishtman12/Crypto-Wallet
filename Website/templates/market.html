@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}
+Crypto Exchange
+{% endblock title %}
+{% block content %}
+
+
+
+<h3 class="white fs-l3 lh-2 md-lh-1 fw-900 mx-10 ">Crypto Exchange
+</h3>
+<div class="row w-100pc  mx-10 py-10" style="margin-left: 5px;">
+    <div class="col-11">
+        <table class="table table-bordered border-black table-hover">
+            <thead>
+                <tr class="table-light">
+                    <th scope="col">S.No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Current Price</th>
+                    <th scope="col">Change</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                {% include 'includes/items_modals.html'%}
+                <tr class="table-light">
+                    <td>{{loop.index}}</td>
+                    <td>
+                        <img src={{item.coin_logo}} width="25" height="25">
+                        {{item.coin_name}}
+                    </td>
+                    <td> &#36 {{item.coin_price}}</td>
+                    <td>
+                        <a>{{item.coin_1}} %</a>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
+                            data-target="#info-{{item.id}}">More Info</button>
+
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
+                            data-target="#buymodal-{{item.id}}">Buy</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#sellmodal-{{item.id}}">Sell</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="white fs-l3 lh-2 md-lh-1 fw-900 mx-10 ">Your PortFolio
+        </h3>
+        <br>
+        <div class="card-deck">
+            {% for owned_item in owned_items %}
+            <div class="card">
+                <div style="margin-bottom:5px;" class="card text-center bg-white">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <img src={{owned_item.coin_logo}} width="25" height="25">
+                            {{owned_item.coin_name}}
+                        </h5>
+                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#sellmodal-{{owned_item.id}}">
+                            Sell This Item
+                        </button>
+                    </div>
+                    <p class="card-text"> Price: &#36 {{owned_item.coin_price}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

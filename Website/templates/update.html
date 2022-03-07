@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+Update
+{% endblock title %}
+{% block content %}
+
+<div class="container my-3">
+    <h2>Update The Task</h2>
+    <form method="POST" class="form-register" style="color:white">
+        {{ form.hidden_tag() }}
+        <div class="col my-2">
+            {{form.title.label()}}
+            {{form.title(class='form-control',placeholder='article.title')}}
+        </div>
+        <div class="col my-2">
+            {{form.detail.label()}}
+            {{form.detail(class='form-control',placeholder='article.detail')}}
+        </div>
+        <br>
+        {{form.submit(class="btn btn-primary mx-3")}}
+    </form>
+</div>
+{% endblock content %}
