@@ -57,7 +57,7 @@ def update(id):
 def market():
 
     #updating the coins data via API
-    # update_coin()
+    update_coin()
 
 
     #responsive 
